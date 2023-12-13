@@ -13,26 +13,12 @@ export class GridContentComponent {
   constructor(){
   } 
 
+  public sites: any[] = [] 
+
   public ngOnInit(): void{
     this.fetchData();
-  }
-
-  public sites: any[] = [] 
-    
+  } 
  
-  // must be deleted/replaced soon  
-  webScraper(currentSite: any){
-    // (async () => {
-    //   const response = await fetch(currentSite);
-    //   const text = await response.text();
-    //   console.log(text);
-    // })();
-
-    console.log(currentSite);
-    return currentSite;
-  }
-
-
 
   public onCardClick(cardName: any){ 
     window.open(cardName, '_blank');
@@ -52,21 +38,5 @@ export class GridContentComponent {
     }
     console.log(Object.entries(jsonData));
   }
-
-
-  
-
-
 }
 
-// WRITE TO FILE 
-// wont work on browserapplications
-// const jsonDDD = require('../../data.json');
-//     let fs = require('fs');
-//     //fs.writeFile(this.sites);
-
-//     fs.writeFile('../../data.json', this.sites , (err: any) => {
-//       if (err) {
-//         console.error(err);
-//       }
-//     });
